@@ -16,7 +16,7 @@
 
 + (void)presentAlertWithMessage:(NSString *)message {
     UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Need to Authorized", @"title for authorized") message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alertCtrl addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Go to", @"jump to app settings") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alertCtrl addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Go", @"jump to app settings") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }]];
     [alertCtrl addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"do nothing") style:UIAlertActionStyleCancel handler:nil]];
